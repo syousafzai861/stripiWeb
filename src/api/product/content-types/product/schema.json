@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,43 @@
   "attributes": {
     "name": {
       "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 5,
+      "maxLength": 110
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "garment",
+        "gadgets",
+        "cloths"
+      ],
+      "default": "garment",
+      "required": true
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red ",
+        "yellow",
+        "green"
+      ],
+      "default": "red ",
+      "required": true
     }
   }
 }
