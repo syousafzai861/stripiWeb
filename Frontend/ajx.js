@@ -18,7 +18,7 @@ function buttonClickHandler() {
     console.log('On progress');
 
 
-    xhr.setRequestHeader('Authorization', 'Bearer 108732ab993b1d353a1dd2687b5ecd040d416bcd8061949685410e6288a3ceedb6d7506c562c11b1f4347cfc200dcdeadfae1203f160d71b38a04cbcb0e9dfa23524d0669e417e13b688a579aee43fc7e151a1acbeec3c0e350c52411a2ace11be4907979b27f1631df375f447f09290654d9ad3d768a6309e2c3babcb049cee');
+    xhr.setRequestHeader('Authorization', 'Bearer 92ca2f13906177b725691b8f457192a173ba5f978a870fd2fbbefe074c7cbce3d4f5c3153f052ac77abbfbfcc8a52495ca68b0816db52e27221aea74d445c5eeaca78f3e8ad9ecc1ec4915db513ab50f3dfadf067316478a73f51acaaa96defd477afe770f2d5f28ce610e5a39e9d442fb8cd05c3bbf09710cd7844e7e254f8c');
     console.log('On progress');
 
 
@@ -27,16 +27,19 @@ function buttonClickHandler() {
 
         if(this.status === 200){
 
-            console.log(this.responseText)
+            // console.log(this.responseText)
+            let x = JSON.parse(this.responseText)
+            console.log(x.data[0].attributes.name)
+            // let file = x.json();
+            // console.log(file)
+            
         }
         else{
             console.log("Some error occured")
         }
     }
     xhr.send();
-
-
-    console.log("We are done!");
+    
 
 }
 // gettting data through ASYNC FUNCTION METHOD 
