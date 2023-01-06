@@ -14,7 +14,7 @@ function buttonClickHandler() {
     console.log('On progress');
 
     // Open the object
-    xhr.open('GET', 'http://localhost:1337/api/products', true);
+    xhr.open('GET', 'http://localhost:1337/api/products?populate=*', true);
     console.log('On progress');
 
 
@@ -39,20 +39,6 @@ function buttonClickHandler() {
     console.log("We are done!");
 
 }
-
-// \
-// 
-
-//     /
-//     }
-
-//     // send the request
-//     xhr.send();
-//     console.log("We are done fetching employees!");
-    
-// }
-
-
 // gettting data through ASYNC FUNCTION METHOD 
 // async function getServerSideProps() {
 // // console.log("entered in the function");
