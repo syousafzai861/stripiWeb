@@ -33,13 +33,11 @@ function buttonClickHandler() {
       console.log(data);
       data.map((data, index) => {
         return (document.getElementById("table_body").innerHTML += `<tr>
-         
-        <td>${data.attributes.name}</td>
+                    <td>${data.attributes.name}</td>
                     <td>${data.attributes.slug}</td>
                     <td>${data.attributes.description}</td>
                     <td>${data.attributes.color}</td>
-
-                    </tr> `);
+                    <td><img src="${data.attributes.image.name}"/></td> </tr> `);
       });
     } else {
       console.log("Some error occured");
