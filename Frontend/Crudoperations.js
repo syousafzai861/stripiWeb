@@ -94,7 +94,8 @@ postlist.addEventListener("click", (e) => {
           .then((data) => {
             //   console.log("renderposts",data)
             renderposts(data);
-          });
+          })
+          .then(location.reload());
       }
     })
     .catch((error) =>{
