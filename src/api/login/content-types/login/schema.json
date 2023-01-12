@@ -15,13 +15,14 @@
     "Email": {
       "type": "email",
       "required": true,
-      "maxLength": 60
+      "maxLength": 60,
+      "unique": true
     },
-    "Password": {
-      "type": "password",
-      "required": true,
+    "password": {
+      "type": "text",
       "minLength": 8,
-      "default": "enter password "
+      "required": true,
+      "maxLength": 40
     }
   }
 }
